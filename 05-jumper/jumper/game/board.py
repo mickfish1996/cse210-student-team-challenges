@@ -10,7 +10,8 @@ class Board():
         
     
     def set_word(self):
-        pass
+        num = random.randint(0, len(self.list))
+        self.word = self.list[num]
 
     def get_word(self):
         return self.word
