@@ -7,4 +7,6 @@ class Jumper:
         rope = 4
         rope -= 1
         if rope == 0:
-            print("Holy crap, you killed him! You monster! Go to h*ck!")
+            print(" x -'Holy crap, you killed Me! You monster! Go to h*ck!'")
+            print("/|\\")
+            print("/ \\")
