@@ -6,6 +6,7 @@ class Board():
         self.word = ""
         self.board_display = ""
         self.filename = ""
+        self.list = []
         
     
     def set_word(self):
