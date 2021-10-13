@@ -13,7 +13,15 @@ class Director:
         self.console = Console()
         self.board = Board()
         self.jumper = Jumper()
-
+        self.can_play = True
+    
+    def start_game(self):
+        self.set_board()
+        while self.can_play:
+            get_inputs()
+            do_updates()
+            do_outputs()
+     
     def get_inputs(self):
 
         self.console.message
