@@ -19,7 +19,8 @@ class Board():
         pass
 
     def read_file(self):
-        self.list = open("wordbank.txt", "r")
+        file = open("wordbank.txt", "r")
+        self.list = file.readlines()
 
     def display_board():
         pass
