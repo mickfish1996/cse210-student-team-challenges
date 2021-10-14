@@ -20,9 +20,9 @@ class Director:
     def start_game(self):
         self.set_board()
         while self.can_play:
-            get_inputs()
-            do_updates()
-            do_outputs()
+            self.get_inputs()
+            self.do_updates()
+            self.do_outputs()
      
     def get_inputs(self):
 
