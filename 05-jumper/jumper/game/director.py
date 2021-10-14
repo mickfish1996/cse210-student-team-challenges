@@ -30,4 +30,6 @@ class Director:
         pass
 
     def do_outputs(self):
-        pass
+        
+
+        self.jumper.is_alive(self.can_play)

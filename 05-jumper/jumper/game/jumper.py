@@ -13,17 +13,15 @@ class Jumper:
         "   / \\"
         ]   
 
-    def update_jumper(self):
-        pass
     
     def cut_rope(self):
+        self.jumper.pop(0)
         pass
-        rope = 4
-        rope -= 1
-        if rope == 0:
+            
+
+    def is_alive(self, can_play):
+        if len(self.jumper) < 4:
+            can_play = False
             print(" x -'Holy crap, you killed Me! You monster! Go to h*ck!'")
             print("/|\\")
             print("/ \\")
-
-    def is_alive():
-        pass
