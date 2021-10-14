@@ -24,3 +24,7 @@ class Jumper:
             print(" x -'Holy crap, you killed Me! You monster! Go to h*ck!'")
             print("/|\\")
             print("/ \\")
+
+
+
+        

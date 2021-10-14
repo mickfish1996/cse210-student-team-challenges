@@ -24,4 +24,5 @@ class Board():
         self.list = file.readlines()
 
     def display_board():
-        for i in range(len(self.word))
+        for i in range(len(self.word)):
+            
