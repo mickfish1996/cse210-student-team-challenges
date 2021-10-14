@@ -1,6 +1,8 @@
 class Jumper:
     def __init__(self):
-        pass
+        self.jumper = []
+
+    def set_jumper(self)
 
     def store_jumper(self):
         pass
