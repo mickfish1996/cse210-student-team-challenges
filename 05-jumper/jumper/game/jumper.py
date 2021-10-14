@@ -2,9 +2,18 @@ class Jumper:
     def __init__(self):
         self.jumper = []
 
-    def set_jumper(self)
+    def set_jumper(self):
+        self.jumper = [
+        "   ___",
+        "  /___\\",
+        "  \   /",
+        "   \ /",
+        "    0",
+        "   /|\\",
+        "   / \\"
+        ]   
 
-    def store_jumper(self):
+    def update_jumper(self):
         pass
     
     def cut_rope(self):
