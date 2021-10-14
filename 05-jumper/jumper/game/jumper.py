@@ -13,8 +13,6 @@ class Jumper:
         "   / \\"
         ]   
 
-    def update_jumper(self):
-        pass
     
     def cut_rope(self):
         pass
