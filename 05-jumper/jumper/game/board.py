@@ -12,6 +12,8 @@ class Board():
     def set_word(self):
         num = random.randint(0, len(self.list))
         self.word = self.list[num]
+        for i in range (len(self.word)):
+            self.board_display.append("_ ")
 
     def get_word(self):
         return self.word
