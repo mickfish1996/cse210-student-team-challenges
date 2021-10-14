@@ -25,4 +25,5 @@ class Board():
 
     def display_board():
         for i in range(len(self.word)):
+            pass
             
