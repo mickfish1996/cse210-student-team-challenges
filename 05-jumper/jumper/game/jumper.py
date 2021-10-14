@@ -25,5 +25,7 @@ class Jumper:
             print("/|\\")
             print("/ \\")
 
-    def is_alive():
+    def is_alive(self, can_play):
+        if len(self.jumper) < 4:
+            can_play = False
         pass
