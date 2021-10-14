@@ -16,7 +16,6 @@ class Jumper:
     
     def cut_rope(self):
         self.jumper.pop(0)
-        pass
             
 
     def is_alive(self, can_play):

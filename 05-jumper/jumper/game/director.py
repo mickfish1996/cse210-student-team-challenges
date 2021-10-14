@@ -14,6 +14,8 @@ class Director:
         self.board = Board()
         self.jumper = Jumper()
         self.can_play = True
+
+
     
     def start_game(self):
         self.set_board()
@@ -27,7 +29,7 @@ class Director:
         self.console.message
 
     def do_updates(self):
-        pass
+        self.jumper.cut_rope()
 
     def do_outputs(self):
         
