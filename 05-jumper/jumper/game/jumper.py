@@ -37,7 +37,7 @@ class Jumper:
 
         elif comparison == word:
             can_play = False
-            print("Congradulations")
+            print("Congratulations")
             
 
         else:
