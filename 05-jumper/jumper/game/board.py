@@ -34,3 +34,5 @@ class Board():
     def read_file(self):
         file = open("wordbank.txt", "r")
         self.list = file.readlines()
+
+    
