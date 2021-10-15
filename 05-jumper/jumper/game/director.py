@@ -41,7 +41,7 @@ class Director:
 
 
     def do_outputs(self):
-        self.console.board_out(self.board.display_board)
+        self.console.board_out(self.board.board_display)
         self.console.jumper_out(self.jumper.get_jumper())
 
         self.jumper.is_alive(self.can_play)
