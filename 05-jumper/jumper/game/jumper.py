@@ -1,7 +1,10 @@
+from game.board import Board
+
 class Jumper:
     def __init__(self):
         self.jumper = []
         self.count = 0
+        self.board = Board
 
     def set_jumper(self):
         self.jumper = [
@@ -27,7 +30,7 @@ class Jumper:
             print("\n    x -'Holy crap, you killed Me! You monster! Go to h*ck!' 👻 ")
             print("   /|\\")
             print("   / \\")
-            print("\nGame Over! You are officially a _ _ _ _ _\n(The word is loser you loser)")
+            print(f"\nGame Over! The word you were looking for was {self.board.word}\nYou are officially a _ _ _ _ _\n(That word was loser you loser)")
             
 
         else:
