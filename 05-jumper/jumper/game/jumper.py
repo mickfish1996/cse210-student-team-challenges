@@ -34,6 +34,7 @@ class Jumper:
             print("   /|\\")
             print("   / \\")
             print("\nGame Over! You are officially a _ _ _ _ _\n(The word is loser you loser)")
+            print(f"\nGame Over! The word you were looking for was {word}\nYou are officially a _ _ _ _ _\n(That word was loser you loser)")
 
         elif comparison == word:
             can_play = False
