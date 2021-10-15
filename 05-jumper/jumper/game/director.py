@@ -21,12 +21,15 @@ class Director:
     def start_game(self):
         self.board.read_file()
         self.board.set_word()
+        self.jumper.set_jumper()
         while self.can_play:
             self.get_inputs()
             self.do_updates()
             self.do_outputs()
      
     def get_inputs(self):
+        if self.jumper.count == 0:
+            self.console.jumper_out(self.jumper.get_jumper())
         self.guess = self.console.prompt_user()
 
     def do_updates(self):

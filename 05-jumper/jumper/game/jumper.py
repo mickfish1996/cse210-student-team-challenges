@@ -1,6 +1,7 @@
 class Jumper:
     def __init__(self):
         self.jumper = []
+        self.count = 0
 
     def set_jumper(self):
         self.jumper = [
@@ -27,3 +28,6 @@ class Jumper:
             print("/|\\")
             print("/ \\")
             print("\nGame Over! You are officially a _ _ _ _ _\n(The word is loser you loser)")
+
+        else:
+            self.count += 1
