@@ -12,9 +12,5 @@ class Console:
             print(jumper[i])
 
     def prompt_user(self):
-<<<<<<< HEAD
-        user_input = input("Adivina una letra [a-z]: ")
-=======
         user_input = input("Guess a letter😊 [a-z]: ")
->>>>>>> 56d7372a01c04f1f21ad91b7df90cd4493ddfd93
         return user_input
