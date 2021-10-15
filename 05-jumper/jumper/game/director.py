@@ -19,6 +19,7 @@ class Director:
 
     
     def start_game(self):
+        self.board.read_file()
         self.board.set_word()
         while self.can_play:
             self.get_inputs()
