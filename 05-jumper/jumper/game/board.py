@@ -16,8 +16,13 @@ class Board():
     def get_word(self):
         return self.word
 
-    def compare_word(self):
-        pass
+    def compare_word(self, guess):
+        for str in self.word:
+            if guess == True:
+                pass
+            else:
+                self.cut_rope()
+
 
     def read_file(self):
         file = open("wordbank.txt", "r")
