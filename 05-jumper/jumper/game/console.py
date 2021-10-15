@@ -4,7 +4,7 @@ class Console:
         pass
 
     def board_out(self, board):
-        for i in range(len(board)):
+        for i in range(len(board) - 1):
             print(board[i], end = "")
 
         print("")
