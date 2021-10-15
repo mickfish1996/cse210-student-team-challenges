@@ -11,6 +11,7 @@ class Director:
                 self (Director): an instance of Director.
             """
         self.console = Console()
+        self.guess = 0
         self.board = Board()
         self.jumper = Jumper()
         self.can_play = True
@@ -25,8 +26,7 @@ class Director:
             self.do_outputs()
      
     def get_inputs(self):
-
-        self.console.message
+        self.guess = self.console.prompt_user()
 
     def do_updates(self):
         self.jumper.cut_rope()

@@ -21,7 +21,7 @@ class Board():
 
     def compare_word(self, guess):
         for str in self.word:
-            if guess == True:
+            if guess == self.word:
                 pass
             else:
                 self.jumper.cut_rope()
