@@ -4,7 +4,7 @@ class Board():
 
     def __init__(self):
         self.word = ""
-        self.board_display = ""
+        self.board_display = []
         self.filename = ""
         self.list = []
         self.jumper = Jumper
@@ -21,8 +21,8 @@ class Board():
 
     def compare_word(self, guess):
         for str in self.word:
-            if guess == True:
-                pass
+            if guess == self.word:
+                self.display_board = guess
             else:
                 self.jumper.cut_rope()
 
