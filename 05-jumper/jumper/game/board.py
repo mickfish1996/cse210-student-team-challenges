@@ -31,7 +31,3 @@ class Board():
     def read_file(self):
         file = open("wordbank.txt", "r")
         self.list = file.readlines()
-
-    def display_board(self):
-        for i in range(len(self.word)):
-            pass
