@@ -28,9 +28,11 @@ class Jumper:
             print("  /|\\")
             print("  / \\")
             print("\nGame Over! You are officially a _ _ _ _ _\n(The word is loser you loser)🤦‍♂️")
-            return can_play
+            
 
         else:
             self.count += 1
+
+        return can_play
 
         
