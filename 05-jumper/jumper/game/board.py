@@ -4,7 +4,7 @@ class Board():
 
     def __init__(self):
         self.word = ""
-        self.board_display = ""
+        self.board_display = []
         self.filename = ""
         self.list = []
         self.jumper = Jumper
