@@ -25,8 +25,6 @@ class Board():
             if guess == self.word[str]:
                 self.board_display[str] = guess
                 check = True
-            else:
-                check = False
 
         return check
 
