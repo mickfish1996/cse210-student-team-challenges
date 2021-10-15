@@ -20,12 +20,15 @@ class Board():
         return self.word
 
     def compare_word(self, guess):
-        for str in self.word:
-            if guess == self.word:
-                self.display_board = guess
-                return True
+        compare = list(self.word)
+        for str in range(len(compare)):
+            if guess == self.word[str]:
+                self.board_display[str] = guess
+                check = True
             else:
-                return False
+                check = False
+
+        return check
 
 
     def read_file(self):

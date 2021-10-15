@@ -28,16 +28,15 @@ class Director:
             self.do_outputs()
      
     def get_inputs(self):
+        print(self.board.word)
         if self.jumper.count == 0:
             self.console.jumper_out(self.jumper.get_jumper())
         self.guess = self.console.prompt_user()
 
     def do_updates(self):
         comparison = self.board.compare_word(self.guess)
-        if comparison:
-            pass
-        else:
-            self.jumper.cut_rope()
+        if comparison == False:
+            self.jumper.cut_rope
 
 
     def do_outputs(self):
