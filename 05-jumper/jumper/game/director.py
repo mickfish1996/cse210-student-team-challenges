@@ -19,7 +19,7 @@ class Director:
 
     
     def start_game(self):
-        self.set_board()
+        self.board.set_word()
         while self.can_play:
             self.get_inputs()
             self.do_updates()
@@ -29,9 +29,10 @@ class Director:
         self.guess = self.console.prompt_user()
 
     def do_updates(self):
-        self.jumper.cut_rope()
+        self.word.compare_word(self.guess)
 
     def do_outputs(self):
-        
+        self.console.board_out(self.board.display_board)
+        self.console.jumper_out(self.jumper.get_jumper())
 
         self.jumper.is_alive(self.can_play)
