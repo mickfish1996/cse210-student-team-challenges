@@ -13,7 +13,9 @@ class Jumper:
         "   / \\"
         ]   
 
-    
+    def get_jumper(self):
+        return self.jumper
+        
     def cut_rope(self):
         self.jumper.pop(0)
             
