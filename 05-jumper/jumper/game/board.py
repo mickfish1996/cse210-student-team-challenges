@@ -1,5 +1,5 @@
 import random
-
+from game.jumper import Jumper
 class Board():
 
     def __init__(self):
@@ -7,6 +7,7 @@ class Board():
         self.board_display = ""
         self.filename = ""
         self.list = []
+        self.jumper = Jumper
         
     
     def set_word(self):
@@ -18,14 +19,19 @@ class Board():
     def get_word(self):
         return self.word
 
-    def compare_word(self):
-        pass
+    def compare_word(self, guess):
+        for str in self.word:
+            if guess == True:
+                pass
+            else:
+                self.jumper.cut_rope()
+
 
     def read_file(self):
         file = open("wordbank.txt", "r")
         self.list = file.readlines()
 
-    def display_board():
+    def display_board(self):
         for i in range(len(self.word)):
             pass
             
