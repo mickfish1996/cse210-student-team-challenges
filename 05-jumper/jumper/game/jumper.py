@@ -11,7 +11,8 @@ class Jumper:
         "   \\ /",
         "    0",
         "   /|\\",
-        "   / \\"
+        "   / \\",
+        " ^^^^^^"
         ]   
 
     def get_jumper(self):
@@ -28,7 +29,7 @@ class Jumper:
 
         comparison_test = comparison +"\n"
 
-        if len(self.jumper) < 4:
+        if len(self.jumper) < 5:
             can_play = False
             print("\n    x -'Holy crap, you killed Me! You monster! Go to h*ck!' 👻 ")
             print("   /|\\")
