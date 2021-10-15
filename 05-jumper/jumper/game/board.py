@@ -12,7 +12,7 @@ class Board():
     
     def set_word(self):
         num = random.randint(0, len(self.list))
-        self.word = self.list[num - 1]
+        self.word = self.list[num - 2]
         for i in range(len(self.word)):
             self.board_display.append("_ ")
 
