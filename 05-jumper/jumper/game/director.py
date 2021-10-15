@@ -35,8 +35,11 @@ class Director:
 
     def do_updates(self):
         comparison = self.board.compare_word(self.guess)
-        if comparison == False:
-            self.jumper.cut_rope
+        if comparison == True:
+            pass
+
+        else:    
+            self.jumper.cut_rope()
 
 
     def do_outputs(self):

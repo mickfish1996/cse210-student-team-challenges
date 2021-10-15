@@ -21,6 +21,7 @@ class Board():
 
     def compare_word(self, guess):
         compare = list(self.word)
+        check = False
         for str in range(len(compare)):
             if guess == self.word[str]:
                 self.board_display[str] = guess
