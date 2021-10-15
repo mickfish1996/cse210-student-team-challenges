@@ -13,6 +13,8 @@ class Console:
         for i in range(len(jumper)):
             print(jumper[i])
 
+        print("\n")
+
     def prompt_user(self):
         user_input = input("Guess a letter😊 [a-z]: ")
         return user_input
