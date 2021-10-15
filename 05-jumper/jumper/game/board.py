@@ -23,8 +23,9 @@ class Board():
         for str in self.word:
             if guess == self.word:
                 self.display_board = guess
+                return True
             else:
-                self.jumper.cut_rope()
+                return False
 
 
     def read_file(self):

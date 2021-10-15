@@ -33,7 +33,12 @@ class Director:
         self.guess = self.console.prompt_user()
 
     def do_updates(self):
-        self.board.compare_word(self.guess)
+        comparison = self.board.compare_word(self.guess)
+        if comparison:
+            pass
+        else:
+            self.jumper.cut_rope()
+
 
     def do_outputs(self):
         self.console.board_out(self.board.display_board)
