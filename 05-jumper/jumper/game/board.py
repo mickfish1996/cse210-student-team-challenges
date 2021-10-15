@@ -22,7 +22,7 @@ class Board():
     def compare_word(self, guess):
         for str in self.word:
             if guess == self.word:
-                pass
+                self.display_board = guess
             else:
                 self.jumper.cut_rope()
 
