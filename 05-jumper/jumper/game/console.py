@@ -4,10 +4,13 @@ class Console:
         pass
 
     def board_out(self, board):
-        pass
+        for i in range (len(board)):
+            print(board[i], end = "")
 
     def jumper_out(self,jumper):
-        pass
+        for i in range (len(jumper)):
+            print(jumper[i])
 
     def prompt_user(self):
-        pass
+        user_input = input("Guess a letter [a-z]: ")
+        return user_input
