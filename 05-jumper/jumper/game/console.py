@@ -15,4 +15,5 @@ class Console:
 
     def prompt_user(self):
         user_input = input("Guess a letter😊 [a-z]: ")
+        print()
         return user_input
