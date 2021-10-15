@@ -23,8 +23,10 @@ class Jumper:
 
     def is_alive(self, can_play,board,word):
         comparison = ""
-        for i in range(len(board)):
+        for i in range(len(board) - 1):
             comparison += board[i]
+
+        print(comparison)
 
         if len(self.jumper) < 4:
             can_play = False
@@ -33,7 +35,7 @@ class Jumper:
             print("   / \\")
             print("\nGame Over! You are officially a _ _ _ _ _\n(The word is loser you loser)")
 
-        elif board == word:
+        elif comparison == word:
             can_play = False
             print("Congradulations")
             
