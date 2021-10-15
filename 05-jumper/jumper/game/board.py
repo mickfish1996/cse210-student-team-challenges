@@ -34,4 +34,3 @@ class Board():
     def display_board(self):
         for i in range(len(self.word)):
             pass
-            
