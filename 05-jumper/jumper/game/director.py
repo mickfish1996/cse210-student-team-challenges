@@ -28,7 +28,6 @@ class Director:
             self.do_outputs()
      
     def get_inputs(self):
-        print(self.board.word)
         if self.jumper.count == 0:
             self.console.jumper_out(self.jumper.get_jumper())
         self.guess = self.console.prompt_user()
