@@ -7,7 +7,7 @@ class Console:
         for i in range(len(board) - 1):
             print(board[i], end = "")
 
-        print("")
+        print("\n")
 
     def jumper_out(self,jumper):
         for i in range(len(jumper)):
