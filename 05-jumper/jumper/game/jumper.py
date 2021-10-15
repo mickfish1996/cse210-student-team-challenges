@@ -1,10 +1,7 @@
-from game.board import Board
-
 class Jumper:
     def __init__(self):
         self.jumper = []
         self.count = 0
-        self.board = Board
 
     def set_jumper(self):
         self.jumper = [
@@ -41,7 +38,7 @@ class Jumper:
         elif comparison == word:
             can_play = False
             print("Congradulations")
-            print(f"\nGame Over! The word you were looking for was {self.board.word}\nYou are officially a _ _ _ _ _\n(That word was loser you loser)")
+            print(f"\nGame Over! The word you were looking for was {word}\nYou are officially a _ _ _ _ _\n(That word was loser you loser)")
             
 
         else:
