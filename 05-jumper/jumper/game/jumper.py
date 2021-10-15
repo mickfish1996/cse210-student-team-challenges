@@ -26,7 +26,7 @@ class Jumper:
         for i in range(len(board) - 1):
             comparison += board[i]
 
-        print(comparison)
+        comparison_test = comparison +"\n"
 
         if len(self.jumper) < 4:
             can_play = False
@@ -35,7 +35,7 @@ class Jumper:
             print("   / \\")
             print(f"\nGame Over! The word you were looking for was {word}\nYou are officially a _ _ _ _ _\n(That word was loser you loser)")
 
-        elif comparison == word:
+        elif comparison_test == word:
             can_play = False
             print("Congratulations")
             
