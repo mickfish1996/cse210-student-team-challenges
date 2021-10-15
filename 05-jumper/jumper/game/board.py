@@ -23,6 +23,7 @@ class Board():
         file = open("wordbank.txt", "r")
         self.list = file.readlines()
 
-    def display_board(self):
+    def display_board():
         for i in range(len(self.word)):
             pass
+            
