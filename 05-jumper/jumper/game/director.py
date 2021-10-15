@@ -43,6 +43,6 @@ class Director:
 
     def do_outputs(self):
         self.console.board_out(self.board.board_display)
-        self.console.jumper_out(self.jumper.get_jumper())
-
         self.can_play = self.jumper.is_alive(self.can_play,self.board.board_display,self.board.word)
+        if self.can_play:
+            self.console.jumper_out(self.jumper.get_jumper())
