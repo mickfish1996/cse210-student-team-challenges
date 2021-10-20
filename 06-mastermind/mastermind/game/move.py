@@ -1,5 +1,9 @@
 
 class Move():
     """
-    Move class. This is Makena's job
+    Move class. 
     """
+    def __init__(self):
+        pass
+
+        
