@@ -12,13 +12,14 @@ class Director():
     Director class
     """
     def __init__(self):
-        self.__board = Board
-        self.__console = Console
-        self.__roster = Roster
-        self.__move = Move
+        self.__board = Board()
+        self.__console = Console()
+        self.__roster = Roster()
+        self.__move = Move()
+        self._keep_playing = True
         
 
-    def start_game():
+    def start_game(self):
         self.__prepare()
         while self._keep_playing:
             self._get_inputs()
@@ -27,11 +28,12 @@ class Director():
             
 
     def __prepare(self):
+        
         for i in range(2):
-            name = self.__roster.read(f"Enter a name for player {i + 1}: ")
-            player = player(name)
-            self.__console.add_player(player)
+            name = self.__console.read(f"Enter a name for player {i + 1}: ")
+            player = Player(name)
+            self.__roster.add_player(player)
 
     def _get_inputs(self):
-        players = self.__roster.get_players()
-        board = self._board.to_string(players)
+        board = self.__board.to_string(self.__roster)
+        self.__console.display_board(board)

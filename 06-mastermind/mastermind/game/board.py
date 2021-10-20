@@ -7,16 +7,16 @@ class Board():
 
     def __init__(self):
         """The class constructor"""
-        _guess = "----"
-        _hing = "****"
+        self._guess = "----"
+        self._hing = "****"
 
     def to_string(self, roster):
         """Converts the board data to string"""
+        players = roster.get_players()
         text = ("----------------------")
-        text += (f"Player {roster.[0]}: {self._guess}, {self._hing}")
-        text += (f"Player {roster.[1]}: {self._guess}, {self._hing}")
-        text += ("----------------------")
-        text += (f"{Roster.get_current}'s turn:")
+        text += (f"\nPlayer {players[0].get_name()}: {self._guess}, {self._hing}")
+        text += (f"\nPlayer {players[1].get_name()}: {self._guess}, {self._hing}")
+        text += ("\n----------------------")
         return text
         
     def create_number(self):
