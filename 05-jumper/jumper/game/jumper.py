@@ -2,7 +2,8 @@ class Jumper:
     def __init__(self):
         self.jumper = []
         self.count = 0
-
+    
+    # This method will initialize the jumper.
     def set_jumper(self):
         self.jumper = [
         "   ___",
@@ -14,14 +15,16 @@ class Jumper:
         "   / \\",
         " ^^^^^^"
         ]   
-
+    # This method will give jumper to everything else
     def get_jumper(self):
         return self.jumper
-        
+
+    # This function will cut the rope    
     def cut_rope(self):
         self.jumper.pop(0)
             
-
+    # This function will determine if you can keep playing
+    # whether you are loosing or winning
     def is_alive(self, can_play,board,word):
         comparison = ""
         for i in range(len(board) - 1):
