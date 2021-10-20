@@ -45,3 +45,6 @@ class Roster:
             self (Roster): An instance of Roster.
         """
         self.current = (self.current + 1) % len(self.players)
+
+    def get_players(self):
+        return self.players

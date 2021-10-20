@@ -10,11 +10,11 @@ class Board():
         _guess = "----"
         _hing = "****"
 
-    def to_string(self, Roster):
+    def to_string(self, roster):
         """Converts the board data to string"""
         text = ("----------------------")
-        text += (f"Player {Roster.players[1]}: {self._guess}, {self._hing}")
-        text += (f"Player {Roster.players[2]}: {self._guess}, {self._hing}")
+        text += (f"Player {roster.[0]}: {self._guess}, {self._hing}")
+        text += (f"Player {roster.[1]}: {self._guess}, {self._hing}")
         text += ("----------------------")
         text += (f"{Roster.get_current}'s turn:")
         return text
