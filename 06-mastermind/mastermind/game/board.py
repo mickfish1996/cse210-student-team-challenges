@@ -1,4 +1,4 @@
 class Board():
     """
-    board class. Figure this out jacob.
+    Displays the board and gives the information to Console
     """
