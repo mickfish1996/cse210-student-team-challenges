@@ -26,3 +26,5 @@ class Director():
             name = self.__roster.read(f"Enter a name for player {i + 1}: ")
             player = player(name)
             self.__console.add_player(player)
+
+    

@@ -7,13 +7,14 @@ class Board():
 
     def __init__(self):
         """The class constructor"""
-        pass
+        _guess = "----"
+        _hing = "****"
 
     def to_string(self):
         """Converts the board data to string"""
         text = ("----------------------")
-        text += ("Player {Player variable}: ----, ****")
-        text += ("Player {Player variable}: ----, ****")
+        text += (f"Player {Player variable}: {}, {}")
+        text += (f"Player {Player variable}: {}, {}")
         text += ("----------------------")
         text += ("{Player variable}'s turn:")
         return text
