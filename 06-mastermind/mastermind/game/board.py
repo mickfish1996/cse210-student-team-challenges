@@ -21,3 +21,5 @@ class Board():
         
     def create_number(self):
         guess_number = random.randint(1000, 9999)
+
+        

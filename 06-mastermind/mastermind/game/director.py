@@ -35,5 +35,8 @@ class Director():
             self.__roster.add_player(player)
 
     def _get_inputs(self):
+        # displays the current board
         board = self.__board.to_string(self.__roster)
         self.__console.display_board(board)
+        # gets input from the user
+        
