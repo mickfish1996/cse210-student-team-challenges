@@ -9,3 +9,6 @@ class Console():
 
     def display_board(self,text):
         print(text)
+
+    def read_number(self, prompt):
+        return int(input(prompt))
