@@ -27,6 +27,20 @@ class Board():
             self._guess[i] = "----"
             self._hint[i] = "****"
 
+    def compare(self, roster):
+        player = roster.get_current()
+        guess_number = list(self.guess_number)
+        guess = list(self._guess[player])
+        for i in range(4):
+            if guess[i] in guess_number:
+                self._hint[player] += "o"
+            elif guess[i] == guess_number[i]:
+                self._hint[player] += "x"
+            else:
+                self._hint[player] += "*"
+
+            
+
     def is_won(self):
         is_won = False
         if self._guess_number == self._guess:
