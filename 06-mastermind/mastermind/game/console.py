@@ -1,7 +1,7 @@
 
 class Console():
     """
-    console class
+    Console class
     """
     
     # Let user input names for the each of the 2 players
