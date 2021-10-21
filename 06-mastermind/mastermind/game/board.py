@@ -27,10 +27,8 @@ class Board():
             self._guess[i] = "----"
             self._hint[i] = "****"
 
-    def compare(self, guess_number, guess):
-        pass
-        if guess_number == guess:
-            is_won() = True
-
-    def is_won():
-        pass
+    def is_won(self):
+        is_won = False
+        if self._guess_number == self._guess:
+            is_won = True
+        return is_won
