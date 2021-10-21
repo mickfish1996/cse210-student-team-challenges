@@ -3,7 +3,7 @@ class Move():
     """
     Move class. 
     """
-    def __init__(self):
-        pass
+    def __init__(self, guess):
+        self._guess = guess
 
         
