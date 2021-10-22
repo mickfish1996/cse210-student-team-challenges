@@ -55,11 +55,16 @@ class Director():
         self.__board.set_guess(move, self.__roster)
         self.__board.compare(self.__roster)
 
+    def read_file(self):
+        file = open("winning.txt", "r")
+        self.list = file.readlines()
+
     def _do_outputs(self):
         if self.__board.is_won(self.__roster):
             winner = self.__roster.get_current()
             self._keep_playing = False
-            self.__console.write(f"{winner.get_name()} won!")
+            self.__console.write(f"{self.board.set_word} {winner.get_name()} won!")
+
 
         else:
             self.__console.write("Try Again!")
