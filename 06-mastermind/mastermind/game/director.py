@@ -43,6 +43,10 @@ class Director():
         self.__console.write(f"{player.get_name()}'s turn:")
         guess = self.__console.read_number("What is your Guess? ")
         move = Move(guess)
+        while guess < 1000 or guess > 9999:
+            self.__console.write(f"Your guess must be between 1000 and 9999. Try again!")
+            guess = self.__console.read_number("What is your Guess? ")
+            move = Move(guess)
         player.set_move(move)
 
     def _do_updates(self):
