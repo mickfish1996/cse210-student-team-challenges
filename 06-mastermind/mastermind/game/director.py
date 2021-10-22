@@ -64,7 +64,7 @@ class Director():
         if self.__board.is_won(self.__roster):
             winner = self.__roster.get_current()
             self._keep_playing = False
-            list = read_file()
+            list = self.read_file()
             self.__console.write(f"{self.board.set_word(list)} {winner.get_name()} won!")
 
 

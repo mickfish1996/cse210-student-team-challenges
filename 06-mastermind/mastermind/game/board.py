@@ -44,7 +44,7 @@ class Board():
     def is_won(self, roster):
         player = roster.get_current_player()
         is_won = False
-        if self._guess_number == self._guess[playergi]:
+        if self._guess_number == self._guess[player]:
             is_won = True
         return is_won
 
