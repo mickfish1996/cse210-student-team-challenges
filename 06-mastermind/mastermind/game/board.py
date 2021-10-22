@@ -48,4 +48,4 @@ class Board():
 
     def set_guess(self, move, roster):
         player = roster.get_current_player()
-        self._guess[player] = move
+        self._guess[player] = move.get_guess()
