@@ -34,10 +34,10 @@ class Board():
         guess = list(str(self._guess[player]))
         self._hint[player] = ""
         for i in range(4):
-            if guess[i] in guess_number:
-                self._hint[player] += "o"
             if guess[i] == guess_number[i]:
                 self._hint[player] += "x"
+            elif guess[i] in guess_number:
+                self._hint[player] += "o"
             else:
                 self._hint[player] += "*"
 
