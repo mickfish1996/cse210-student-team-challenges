@@ -48,7 +48,7 @@ class Director():
     def _do_updates(self):
         player = self.__roster.get_current()
         move = player.get_move()
-        self.__board.set_guess(move)
+        self.__board.set_guess(move, __roster)
 
     def _do_outputs(self):
         if self.__board.is_won():
