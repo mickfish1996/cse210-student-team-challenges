@@ -52,7 +52,7 @@ class Director():
         self.__board.compare(self.__roster)
 
     def _do_outputs(self):
-        if self.__board.is_won():
+        if self.__board.is_won(self.__roster):
             winner = self.__roster.get_current()
             self._keep_playing = False
 
