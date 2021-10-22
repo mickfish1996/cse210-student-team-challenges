@@ -54,6 +54,7 @@ class Director():
     def _do_outputs(self):
         if self.__board.is_won():
             winner = self.__roster.get_current()
+            self._keep_playing = False
 
         self.__roster.next_player()
 
