@@ -37,7 +37,7 @@ class Director():
     def _get_inputs(self):
         # displays the current board
         board = self.__board.to_string(self.__roster)
-        self.__console.display_board(board)
+        self.__console.write(board)
         # gets input from the user
         player = self.__roster.get_current()
         self.__console.write(f"{player.get_name()}'s turn:")
