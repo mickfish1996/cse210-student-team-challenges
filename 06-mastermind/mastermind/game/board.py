@@ -15,7 +15,7 @@ class Board():
     def to_string(self, roster):
         """Converts the board data to string"""
         players = roster.get_players()
-        guess = str(self._guess)
+        guess = self._guess
         text = ("----------------------")
         text += (f"\nPlayer {players[0].get_name()}: {guess[0]}, {self._hint[0]}")
         text += (f"\nPlayer {players[1].get_name()}: {guess[1]}, {self._hint[1]}")
@@ -29,9 +29,9 @@ class Board():
             self._hint.append("****")
 
     def compare(self, roster):
-        player = roster.get_current()
-        guess_number = list(self.guess_number)
-        guess = list(self._guess[player])
+        player = roster.get_current_player()
+        guess_number = list(str(self.guess_number))
+        guess = list(str(self._guess[player]))
         for i in range(4):
             if guess[i] in guess_number:
                 self._hint[player] += "o"
@@ -47,5 +47,5 @@ class Board():
         return is_won
 
     def set_guess(self, move, roster):
-        player = roster.get_current()
-        self._guess = move.get_guess()
+        player = roster.get_current_player()
+        self._guess[player] = move

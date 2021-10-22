@@ -49,3 +49,6 @@ class Roster:
     # Retrives player names and passes to different function for display
     def get_players(self):
         return self.players
+
+    def get_current_player(self):
+        return self.current
