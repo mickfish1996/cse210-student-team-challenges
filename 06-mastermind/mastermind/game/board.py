@@ -23,14 +23,14 @@ class Board():
         return text
         
     def create_number(self):
-        self.guess_number = random.randint(1000, 9999)
+        self._guess_number = random.randint(1000, 9999)
         for i in range(2):
             self._guess.append("----")
             self._hint.append("****")
 
     def compare(self, roster):
         player = roster.get_current_player()
-        guess_number = list(str(self.guess_number))
+        guess_number = list(str(self._guess_number))
         guess = list(str(self._guess[player]))
         self._hint[player] = ""
         for i in range(4):
