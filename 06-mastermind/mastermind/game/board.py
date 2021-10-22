@@ -53,7 +53,7 @@ class Board():
         self._guess[player] = move.get_guess()
 
         
-    def set_word(self):
+    def set_word(self, list):
         num = random.randint(0, len(list))
         word = list[num - 2]
         return word
