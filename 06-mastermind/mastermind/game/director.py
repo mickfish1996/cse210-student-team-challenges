@@ -41,14 +41,14 @@ class Director():
         # gets input from the user
         player = self.__roster.get_current()
         self.__console.write(f"{player.get_name()}'s turn:")
-        guess = self.__console.read_number("What is your Guess?")
+        guess = self.__console.read_number("What is your Guess? ")
         move = Move(guess)
         player.set_move(move)
 
     def _do_updates(self):
         player = self.__roster.get_current()
         move = player.get_move()
-        self.__board.set_guess(move, __roster)
+        self.__board.set_guess(move, self.__roster)
 
     def _do_outputs(self):
         if self.__board.is_won():
