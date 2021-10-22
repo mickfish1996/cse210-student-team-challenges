@@ -55,8 +55,13 @@ class Director():
         if self.__board.is_won(self.__roster):
             winner = self.__roster.get_current()
             self._keep_playing = False
+            self.__console.write(f"{winner.get_name()} won!")
+
+        else:
+            self.__console.write("Try Again!")
 
         self.__roster.next_player()
+       
 
         
         
