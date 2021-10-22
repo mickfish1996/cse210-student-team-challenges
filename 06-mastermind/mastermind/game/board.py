@@ -23,12 +23,14 @@ class Board():
         return text
         
     def create_number(self):
+        """Generates a random number"""
         self._guess_number = random.randint(1000, 9999)
         for i in range(2):
             self._guess.append("----")
             self._hint.append("****")
 
     def compare(self, roster):
+        """Compares a guess to the randomly generated number"""
         player = roster.get_current_player()
         guess_number = list(str(self._guess_number))
         guess = list(str(self._guess[player]))
@@ -42,6 +44,7 @@ class Board():
                 self._hint[player] += "*"
 
     def is_won(self, roster):
+        """Determines if a player has"""
         player = roster.get_current_player()
         is_won = False
         if self._guess_number == self._guess[player]:
