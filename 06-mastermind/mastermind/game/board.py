@@ -32,10 +32,11 @@ class Board():
         player = roster.get_current_player()
         guess_number = list(str(self.guess_number))
         guess = list(str(self._guess[player]))
+        self._hint[player] = ""
         for i in range(4):
             if guess[i] in guess_number:
                 self._hint[player] += "o"
-            elif guess[i] == guess_number[i]:
+            if guess[i] == guess_number[i]:
                 self._hint[player] += "x"
             else:
                 self._hint[player] += "*"
