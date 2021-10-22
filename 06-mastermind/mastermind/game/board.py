@@ -15,9 +15,10 @@ class Board():
     def to_string(self, roster):
         """Converts the board data to string"""
         players = roster.get_players()
+        guess = str(self._guess)
         text = ("----------------------")
-        text += (f"\nPlayer {players[0].get_name()}: {self._guess[0]}, {self._hint[0]}")
-        text += (f"\nPlayer {players[1].get_name()}: {self._guess[1]}, {self._hint[1]}")
+        text += (f"\nPlayer {players[0].get_name()}: {guess[0]}, {self._hint[0]}")
+        text += (f"\nPlayer {players[1].get_name()}: {guess[1]}, {self._hint[1]}")
         text += ("\n----------------------")
         return text
         
