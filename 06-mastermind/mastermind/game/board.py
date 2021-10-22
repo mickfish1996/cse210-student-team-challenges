@@ -16,8 +16,8 @@ class Board():
         """Converts the board data to string"""
         players = roster.get_players()
         text = ("----------------------")
-        text += (f"\nPlayer {players[0].get_name()}: {self._guess}, {self._hint}")
-        text += (f"\nPlayer {players[1].get_name()}: {self._guess}, {self._hint}")
+        text += (f"\nPlayer {players[0].get_name()}: {self._guess[0]}, {self._hint[0]}")
+        text += (f"\nPlayer {players[1].get_name()}: {self._guess[1]}, {self._hint[1]}")
         text += ("\n----------------------")
         return text
         
@@ -38,8 +38,6 @@ class Board():
                 self._hint[player] += "x"
             else:
                 self._hint[player] += "*"
-
-            
 
     def is_won(self):
         is_won = False
