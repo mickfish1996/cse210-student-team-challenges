@@ -51,3 +51,10 @@ class Board():
     def set_guess(self, move, roster):
         player = roster.get_current_player()
         self._guess[player] = move.get_guess()
+
+        
+    def set_word(self):
+        num = random.randint(0, len(self.list))
+        self.word = self.list[num - 2]
+        for i in range(len(self.word)):
+            self.board_display.append("_ ")
