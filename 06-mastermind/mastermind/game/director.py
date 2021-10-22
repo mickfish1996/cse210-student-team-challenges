@@ -57,13 +57,15 @@ class Director():
 
     def read_file(self):
         file = open("winning.txt", "r")
-        self.list = file.readlines()
+        list = file.readlines()
+        return list
 
     def _do_outputs(self):
         if self.__board.is_won(self.__roster):
             winner = self.__roster.get_current()
             self._keep_playing = False
-            self.__console.write(f"{self.board.set_word} {winner.get_name()} won!")
+            list = read_file()
+            self.__console.write(f"{self.board.set_word(list)} {winner.get_name()} won!")
 
 
         else:
