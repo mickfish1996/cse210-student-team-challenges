@@ -9,7 +9,7 @@ class Console():
         return input(prompt)
 
     # Displays the board
-    def display_board(self,text):
+    def write(self,text):
         print(text)
 
     # prompt for the user input.
