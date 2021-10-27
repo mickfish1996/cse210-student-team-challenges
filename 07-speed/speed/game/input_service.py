@@ -1,5 +1,6 @@
 import sys
-from asciimatics.event import KeyboardEvent
+from game.point import Point
+import raylibpy
 
 class InputService:
     """Detects player input. The responsibility of the class of objects is to detect player keypresses and translate them into a point representing a direction (or velocity).
