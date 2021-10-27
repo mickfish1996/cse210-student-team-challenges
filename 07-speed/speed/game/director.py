@@ -19,6 +19,7 @@ class Director:
         self._inputs = WordInput()
 
     def start_game(self):
+        """Begins the game by pulling up the game window"""
         print("Starting game...")
         self._output_service.open_window("Speed")
         self._prepare_board()
@@ -39,12 +40,15 @@ class Director:
         
 
     def _do_updates(self):
+        """Spawn in new words at random locations 
+        on the right side of the screen"""
         pass
 
     def _do_outputs(self):
         self._output_service.draw_text(20, 20, self._inputs.get_input(), True)
 
     def _prepare_board(self):
+        """Starts the game with 5 words"""
         for i in range(5):
             i = Word()
             self._word.append(i)
