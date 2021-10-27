@@ -6,4 +6,4 @@ from game.point import Point
 
 class director:
     def __init__(self):
-        self.
+        pass
