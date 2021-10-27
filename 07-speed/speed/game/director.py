@@ -21,8 +21,9 @@ class Director:
     def start_game(self):
         """Begins the game by pulling up the game window"""
         print("Starting game...")
-        self._output_service.open_window("Speed")
         self._prepare_board()
+        self._output_service.open_window("Speed")
+ 
          
         while self._keep_playing:
             self._get_inputs()
@@ -45,7 +46,7 @@ class Director:
         pass
 
     def _do_outputs(self):
-        self._output_service.draw_actor(_score_board)
+        self._output_service.draw_actor(self._score_board)
         self._output_service.draw_text(20, 20, self._inputs.get_input(), True)
 
     def _prepare_board(self):
