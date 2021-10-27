@@ -30,6 +30,7 @@ class InputService:
         """
         result = ""
         event = raylibpy.get_key_pressed()
+        assert type(event) is int
         if not event is None:
             if event == 27:
                 sys.exit()
