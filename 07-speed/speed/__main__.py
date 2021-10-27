@@ -12,4 +12,5 @@ def main(screen):
     director = Director(input_service, output_service)
     director.start_game()
 
-Screen.wrapper(main)
+if __name__ == "__main__":
+    main()
