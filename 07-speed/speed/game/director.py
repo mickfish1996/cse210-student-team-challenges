@@ -6,6 +6,7 @@ from game.score_board import ScoreBoard
 from game.word import Word
 from game import constants
 from game.point import Point
+from game.word_input import WordInput
 
 
 class Director:
@@ -15,10 +16,12 @@ class Director:
         self._output_service = output_service
         self._score_board = ScoreBoard()
         self._keep_playing = True
+        self._inputs = WordInput()
 
     def start_game(self):
         print("Starting game...")
         self._output_service.open_window("Speed")
+        self._prepare_board()
          
         while self._keep_playing:
             self._get_inputs()
@@ -31,10 +34,17 @@ class Director:
         print("Game Over!")
 
     def _get_inputs(self):
-        pass
+        self._inputs.set_input(self._input_service.get_letter())
+
+        
 
     def _do_updates(self):
         pass
 
     def _do_outputs(self):
-        pass
+        self._output_service.draw_text(20, 20, self._inputs.get_input(), True)
+
+    def _prepare_board(self):
+        for i in range(5):
+            i = Word()
+            self._word.append(i)

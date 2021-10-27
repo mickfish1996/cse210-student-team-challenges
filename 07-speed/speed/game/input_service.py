@@ -1,5 +1,4 @@
 import sys
-from game.point import Point
 import raylibpy
 
 class InputService:
@@ -18,7 +17,7 @@ class InputService:
         Args:
             self (InputService): An instance of InputService.
         """
-        self._current = Point(1, 0)
+        pass
         
     def get_letter(self):
         """Gets the letter that was typed. If the enter key was pressed returns an asterisk.
@@ -29,13 +28,13 @@ class InputService:
         Returns:
             string: The letter that was typed.
         """
-        # result = ""
-        # event = self._current.()
-        # if not event is None:
-        #     if event == 27:
-        #         sys.exit()
-        #     elif event == 10: 
-        #         result = "*"
-        #     elif event >= 97 and event <= 122: 
-        #         result = chr(event)
-        # return result
+        result = ""
+        event = raylibpy.get_key_pressed()
+        if not event is None:
+            if event == 27:
+                sys.exit()
+            elif event == 10: 
+                result = "*"
+            elif event >= 97 and event <= 122: 
+                result = chr(event)
+        return result
