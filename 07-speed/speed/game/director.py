@@ -1,4 +1,4 @@
-from game.score_board import Score_board
+from game.score_board import ScoreBoard
 
 class Director:
     pass
