@@ -46,7 +46,7 @@ class Director:
         pass
 
     def _do_outputs(self):
-        self._output_service.draw_actor(self._score_board)
+        self._output_service.draw_actors(self._score_board)
         self._output_service.draw_text(20, 20, self._inputs.get_input(), True)
 
     def _prepare_board(self):
