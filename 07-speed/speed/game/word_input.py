@@ -5,7 +5,7 @@ class WordInput(Actor):
     def __init__(self):
         super().__init__()
         self.reset_input()
-        point = Point(1,399)
+        point = Point(1,375)
         self.set_position(point)
 
 
