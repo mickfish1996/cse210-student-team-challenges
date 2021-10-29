@@ -47,6 +47,8 @@ class Director:
 
     def _do_outputs(self):
         
+        self._output_service.clear_screen()
+
         self._output_service.draw_actor(self._score_board)
         self._output_service.draw_actor(self._inputs)        
         
@@ -59,3 +61,6 @@ class Director:
         for i in range(5):
             word = Word()
             self._word.append(word)
+
+    def handle_input_correct():
+        pass
