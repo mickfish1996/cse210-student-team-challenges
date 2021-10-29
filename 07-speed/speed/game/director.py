@@ -21,7 +21,7 @@ class Director:
     def start_game(self):
         """Begins the game by pulling up the game window"""
         print("Starting game...")
-        self._prepare_board()
+        #self._prepare_board()
         self._output_service.open_window("Speed")
  
          
@@ -47,7 +47,7 @@ class Director:
 
     def _do_outputs(self):
         self._output_service.draw_actor(self._score_board)
-        self._output_service.draw_text(20, 20, self._inputs.get_input(), True)
+        self._output_service.draw_actor(self._inputs)
 
     def _prepare_board(self):
         """Starts the game with 5 words"""
