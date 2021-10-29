@@ -33,7 +33,7 @@ class InputService:
         assert type(event) is int
         
         if not event is None:
-            if event == 27:
+            if event == 27 or event == 96:
                 sys.exit()
             elif event == 10: 
                 result = "*"
