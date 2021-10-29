@@ -37,7 +37,7 @@ class Director:
 
     def _get_inputs(self):
         self._inputs.set_input(self._input_service.get_letter())
-
+        
         
 
     def _do_updates(self):
@@ -46,11 +46,15 @@ class Director:
         pass
 
     def _do_outputs(self):
+        
         self._output_service.draw_actor(self._score_board)
         self._output_service.draw_text(20, 20, self._inputs.get_input(), True)
+        
+        self._output_service.flush_buffer()
+        
 
     def _prepare_board(self):
         """Starts the game with 5 words"""
         for i in range(5):
-            i = Word()
-            self._word.append(i)
+            word = Word()
+            self._word.append(word)

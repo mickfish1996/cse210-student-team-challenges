@@ -38,4 +38,5 @@ class InputService:
                 result = "*"
             elif event >= 97 and event <= 122: 
                 result = chr(event)
+                assert type(result) is str
         return result
