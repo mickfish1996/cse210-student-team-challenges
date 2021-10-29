@@ -11,7 +11,7 @@ from game.word_input import WordInput
 
 class Director:
     def __init__(self, input_service, output_service):
-        self._word = []
+        self._words = []
         self._input_service = input_service
         self._output_service = output_service
         self._score_board = ScoreBoard()
@@ -21,7 +21,7 @@ class Director:
     def start_game(self):
         """Begins the game by pulling up the game window"""
         print("Starting game...")
-        #self._prepare_board()
+        self._prepare_board()
         self._output_service.open_window("Speed")
  
          
@@ -43,14 +43,17 @@ class Director:
     def _do_updates(self):
         """Spawn in new words at random locations 
         on the right side of the screen"""
-        pass
+        for word in self._words:
+            word.move_next()
+        
 
     def _do_outputs(self):
         
         self._output_service.clear_screen()
 
         self._output_service.draw_actor(self._score_board)
-        self._output_service.draw_actor(self._inputs)        
+        self._output_service.draw_actor(self._inputs)
+        self._output_service.draw_actors(self._words)      
         
         self._output_service.flush_buffer()
         
@@ -60,7 +63,8 @@ class Director:
         """Starts the game with 5 words"""
         for i in range(5):
             word = Word()
-            self._word.append(word)
+            self._words.append(word)
+        
 
     def handle_input_correct():
         pass

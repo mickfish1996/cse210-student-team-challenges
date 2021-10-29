@@ -1,5 +1,7 @@
+import random
 from game.actor import Actor
 from game import constants
+from game.point import Point
 
 class Word(Actor):
     def __init__(self):
@@ -8,11 +10,13 @@ class Word(Actor):
         self.prepare()
 
     def prepare(self):
-        list_size = len(LIBRARY)
+        list_size = len(constants.LIBRARY)
         num = random.randint(1,list_size - 1)
-        word = LIBRARY[num]
+        word = constants.LIBRARY[num]
 
         self.set_text(word.strip())
-        y = random.randint(1, MAX_Y)
-        position = Point(MAX_X, y)
+        y = random.randint(1, 375)
+        position = Point(constants.MAX_X, y)
         self.set_position(position)
+        velocity = Point(-1,0)
+        self.set_velocity(velocity)
