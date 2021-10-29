@@ -39,6 +39,7 @@ class Director:
         self._inputs.set_input(self._input_service.get_letter())
         
         
+        
 
     def _do_updates(self):
         """Spawn in new words at random locations 
