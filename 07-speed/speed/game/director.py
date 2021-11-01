@@ -46,8 +46,6 @@ class Director:
     def _do_updates(self):
         """Spawn in new words at random locations 
         on the right side of the screen"""
-        for word in self._words:
-            word.move_next()
         if self._make_more > 0 and self._count == 20:
             word = Word()
             self._words.append(word)
@@ -55,6 +53,8 @@ class Director:
             self._count = 0
         else:
             self._count += 1
+        for word in self._words:
+            word.move_next()
         
 
     def _do_outputs(self):
