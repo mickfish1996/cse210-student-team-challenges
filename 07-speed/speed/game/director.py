@@ -53,8 +53,12 @@ class Director:
             self._count = 0
         else:
             self._count += 1
+        new_count = 0
         for word in self._words:
             word.move_next()
+            if word.get_position().get_x() == 0:
+                self.destroy_word(new_count)
+                new_count += 1
         
 
     def _do_outputs(self):
