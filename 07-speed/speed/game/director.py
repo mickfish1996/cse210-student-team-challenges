@@ -81,6 +81,11 @@ class Director:
 
     def handle_input_correct(self):
         pass
+    #handle comparison. Give points if it is correct and delete it
+        #if (input) = (word):
+            #give points and word_input.reset_input
+        #if * is input:
+            #word_input.reset_input
     
     def destroy_word(self,num):
         self._words.pop(num)
