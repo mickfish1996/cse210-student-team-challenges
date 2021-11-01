@@ -17,6 +17,8 @@ class Director:
         self._score_board = ScoreBoard()
         self._keep_playing = True
         self._inputs = WordInput()
+        self._make_more = 0
+        self._count = 0
 
     def start_game(self):
         """Begins the game by pulling up the game window"""
@@ -46,6 +48,13 @@ class Director:
         on the right side of the screen"""
         for word in self._words:
             word.move_next()
+        if self._make_more > 0 and self._count == 20:
+            word = Word()
+            self._words.append(word)
+            self._make_more -= 1
+            self._count = 0
+        else:
+            self._count += 1
         
 
     def _do_outputs(self):
@@ -62,12 +71,11 @@ class Director:
 
     def _prepare_board(self):
         """Starts the game with 5 words"""
-        for i in range(5):
-            word = Word()
-            self._words.append(word)
+        self._make_more = 5
+        self._count = 20
         
 
-    def handle_input_correct():
+    def handle_input_correct(self):
         pass
     
     def destroy_word(self,num):

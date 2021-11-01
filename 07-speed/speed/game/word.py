@@ -16,7 +16,7 @@ class Word(Actor):
 
         self.set_text(word.strip())
         y = random.randint(1, 375)
-        x = random.randint(525,constants.MAX_X)
+        x = constants.MAX_X
         position = Point(x, y)
         self.set_position(position)
         velocity = Point(-1,0)
