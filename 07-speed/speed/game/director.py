@@ -72,3 +72,4 @@ class Director:
     
     def destroy_word(self,num):
         self._words.pop(num)
+        self._make_more += 1
