@@ -7,7 +7,6 @@ from game.word import Word
 from game import constants
 from game.point import Point
 from game.word_input import WordInput
-from speed.game import word
 
 
 class Director:
