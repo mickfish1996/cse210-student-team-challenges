@@ -47,6 +47,7 @@ class Director:
         """Spawn in new words at random locations 
         on the right side of the screen"""
         self._erase_input()
+        self._handle_input_correct
         if self._make_more > 0 and self._count == 20:
             word = Word()
             self._words.append(word)
@@ -84,7 +85,7 @@ class Director:
         self._count = 20
         
 
-    def handle_input_correct(self):
+    def _handle_input_correct(self):
         pass
     #handle comparison. Give points if it is correct and delete it
         #if (input) = (word):
