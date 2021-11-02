@@ -7,6 +7,7 @@ from game.word import Word
 from game import constants
 from game.point import Point
 from game.word_input import WordInput
+from speed.game import word
 
 
 class Director:
@@ -91,7 +92,8 @@ class Director:
         #if (input) = (word):
             #give points and word_input.reset_input
         #if * is input:
-            #word_input.reset_input
+            #for i in range(len(word)):
+                #self._score_board.add_points(i)
     
     def destroy_word(self,num):
         self._words.pop(num)
