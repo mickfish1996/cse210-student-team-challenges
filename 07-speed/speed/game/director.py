@@ -46,6 +46,7 @@ class Director:
     def _do_updates(self):
         """Spawn in new words at random locations 
         on the right side of the screen"""
+        self._erase_input()
         if self._make_more > 0 and self._count == 20:
             word = Word()
             self._words.append(word)
@@ -71,6 +72,10 @@ class Director:
         
         self._output_service.flush_buffer()
         
+    def _erase_input(self):
+        erase = self._input_service.erase_function()
+        if erase == True:
+            self._inputs.reset_input()
     
 
     def _prepare_board(self):

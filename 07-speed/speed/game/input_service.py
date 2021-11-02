@@ -1,6 +1,8 @@
 import sys
 import raylibpy
 
+from game.word_input import WordInput
+
 class InputService:
     """Detects player input. The responsibility of the class of objects is to detect player keypresses and translate them into a point representing a direction (or velocity).
 
@@ -17,7 +19,7 @@ class InputService:
         Args:
             self (InputService): An instance of InputService.
         """
-        pass
+        self._inputs = WordInput()
         
     def get_letter(self):
         """Gets the letter that was typed. If the enter key was pressed returns an asterisk.
@@ -29,6 +31,7 @@ class InputService:
             string: The letter that was typed.
         """
         result = ""
+        self.erase = False
         event = raylibpy.get_key_pressed()
         assert type(event) is int
         
@@ -37,7 +40,12 @@ class InputService:
                 sys.exit()
             elif event == 92 or event == 10: 
                 result = "*"
+                self.erase = True
             elif event >= 97 and event <= 122: 
                 result = chr(event)
                 assert type(result) is str
+            self.erase_function()
         return result
+
+    def erase_function(self):
+        return self.erase
