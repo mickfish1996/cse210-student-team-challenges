@@ -33,16 +33,16 @@ class InputService:
         result = ""
         self.erase = False
         event = raylibpy.get_key_pressed()
-        if _is_enter_pressed():
+        if self._is_enter_pressed():
             event = 13
-        elif _is_esc_pressed():
+        elif self._is_esc_pressed():
             event = 27
         assert type(event) is int
         
         if not event is None:
             if event == 27 or event == 96:
                 sys.exit()
-            elif event == 92 or event == 10: 
+            elif event == 92 or event == 13: 
                 result = "*"
                 self.erase = True
             elif event >= 97 and event <= 122: 
