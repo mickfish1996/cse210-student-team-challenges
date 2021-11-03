@@ -93,7 +93,7 @@ class Director:
         while i < 5:
             try:
                 if self._words[i].get_text() in self._inputs.get_text():
-                    self._score_board.add_points(self._word.get_score())
+                    self._score_board.add_points(len(self._words[i].get_text()))
                     self.destroy_word(i)
                     self._inputs.reset_input()
                     self._missed_words = 0

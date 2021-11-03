@@ -17,7 +17,7 @@ class Word(Actor):
         num = random.randint(1,list_size - 1)
         word = constants.LIBRARY[num]
 
-        self.score = len(word)
+        #self.score = len(word)
 
         self.set_text(word.strip())
         y = random.randint(1, 375)
