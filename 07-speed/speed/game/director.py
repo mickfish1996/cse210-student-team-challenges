@@ -83,7 +83,16 @@ class Director:
         
 
     def _handle_input_correct(self):
-        pass
+        i = 0
+        while i < 5:
+            if self._words[i].get_text() in self._inputs.get_text():
+                
+                
+                self.destroy_word(i)
+                self._inputs.reset_input()
+                missed_words = 0
+            else:
+                i += 1
     #handle comparison. Give points if it is correct and delete it
         #if (input) = (word):
             #give points and word_input.reset_input
