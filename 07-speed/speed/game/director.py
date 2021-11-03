@@ -21,6 +21,7 @@ class Director:
         self._make_more = 0
         self._count = 0
         self._missed_words = 0
+        self._word = Word()
 
     def start_game(self):
         """Begins the game by pulling up the game window"""
@@ -91,7 +92,7 @@ class Director:
         while i < 5:
             if self._words[i].get_text() in self._inputs.get_text():
                 
-                
+                self._score_board.add_points(self._word.get_score())
                 self.destroy_word(i)
                 self._inputs.reset_input()
                 self._missed_words = 0
