@@ -10,13 +10,14 @@ class Word(Actor):
         super().__init__()
         self._point = 0
         self.prepare()
+        self.score
 
     def prepare(self):
         list_size = len(constants.LIBRARY)
         num = random.randint(1,list_size - 1)
         word = constants.LIBRARY[num]
 
-        score = len(word)
+        self.score = len(word)
 
         self.set_text(word.strip())
         y = random.randint(1, 375)
@@ -25,4 +26,7 @@ class Word(Actor):
         self.set_position(position)
         velocity = Point(-1,0)
         self.set_velocity(velocity)
+
+    def get_score(self):
+        return self.score
         
