@@ -80,6 +80,10 @@ class Director:
         
 
     def handle_input_correct(self):
+        #if input == self._words:
+        #    self.reset_input(self)
+        #if input == "*":
+        #    self.reset_input(self)
         pass
     #handle comparison. Give points if it is correct and delete it
         #if (input) = (word):
