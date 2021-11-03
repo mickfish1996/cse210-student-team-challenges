@@ -66,6 +66,7 @@ class Director:
                 self.destroy_word(new_count)
                 new_count += 1
                 self._missed_words += 1
+            _missed_words()
         
 
     def _do_outputs(self):
