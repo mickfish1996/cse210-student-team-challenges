@@ -1,6 +1,7 @@
 from time import sleep
 
 import raylibpy
+import sys
 
 from game.score_board import ScoreBoard
 from game.word import Word
@@ -19,6 +20,7 @@ class Director:
         self._inputs = WordInput()
         self._make_more = 0
         self._count = 0
+        self._missed_words = 0
 
     def start_game(self):
         """Begins the game by pulling up the game window"""
@@ -63,6 +65,7 @@ class Director:
             if word.get_position().get_x() == 0:
                 self.destroy_word(new_count)
                 new_count += 1
+                self._missed_words += 1
         
 
     def _do_outputs(self):
@@ -95,3 +98,7 @@ class Director:
         self._words.pop(num)
         self._make_more += 1
         self._count = 20
+
+    def game_over(self):
+        if self._missed_words == 5:
+            sys.exit()
