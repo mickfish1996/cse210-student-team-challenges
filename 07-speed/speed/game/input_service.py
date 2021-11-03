@@ -44,7 +44,7 @@ class InputService:
             elif event >= 97 and event <= 122: 
                 result = chr(event)
                 assert type(result) is str
-            self.erase_function()
+            #self.erase_function()
         return result
 
     def erase_function(self):

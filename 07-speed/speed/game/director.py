@@ -39,6 +39,9 @@ class Director:
 
     def _get_inputs(self):
         self._inputs.set_input(self._input_service.get_letter())
+        erase = self._input_service.erase_function()
+        if erase == True:
+            self._inputs.reset_input()
         
         
         
@@ -46,7 +49,6 @@ class Director:
     def _do_updates(self):
         """Spawn in new words at random locations 
         on the right side of the screen"""
-        self._erase_input()
         self._handle_input_correct
         if self._make_more > 0 and self._count == 20:
             word = Word()
@@ -73,11 +75,6 @@ class Director:
         
         self._output_service.flush_buffer()
         
-    def _erase_input(self):
-        erase = self._input_service.erase_function()
-        if erase == True:
-            self._inputs.reset_input()
-    
 
     def _prepare_board(self):
         """Starts the game with 5 words"""
