@@ -91,13 +91,15 @@ class Director:
         """Checks to see if the input matches a word"""
         i = 0
         while i < 5:
-            if self._words[i].get_text() in self._inputs.get_text():
-                print(self._inputs.get_text())
-                self._score_board.add_points(self._word.get_score())
-                self.destroy_word(i)
-                self._inputs.reset_input()
-                self._missed_words = 0
-            else:
+            try:
+                if self._words[i].get_text() in self._inputs.get_text():
+                    self._score_board.add_points(self._word.get_score())
+                    self.destroy_word(i)
+                    self._inputs.reset_input()
+                    self._missed_words = 0
+                else:
+                    i += 1
+            except IndexError:
                 i += 1
     
     def destroy_word(self,num):
