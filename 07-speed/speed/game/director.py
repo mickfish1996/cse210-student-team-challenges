@@ -94,7 +94,7 @@ class Director:
                 
                 self.destroy_word(i)
                 self._inputs.reset_input()
-                missed_words = 0
+                self._missed_words = 0
             else:
                 i += 1
     #handle comparison. Give points if it is correct and delete it
