@@ -52,7 +52,7 @@ class Director:
     def _do_updates(self):
         """Spawn in new words at random locations 
         on the right side of the screen"""
-        self._handle_input_correct
+        self._handle_input_correct()
         if self._make_more > 0 and self._count == 20:
             word = Word()
             self._words.append(word)
@@ -88,22 +88,17 @@ class Director:
         
 
     def _handle_input_correct(self):
+        """Checks to see if the input matches a word"""
         i = 0
         while i < 5:
             if self._words[i].get_text() in self._inputs.get_text():
-                
+                print(self._inputs.get_text())
                 self._score_board.add_points(self._word.get_score())
                 self.destroy_word(i)
                 self._inputs.reset_input()
                 self._missed_words = 0
             else:
                 i += 1
-    #handle comparison. Give points if it is correct and delete it
-        #if (input) = (word):
-            #give points and word_input.reset_input
-        #if * is input:
-            #for i in range(len(word)):
-                #self._score_board.add_points(i)
     
     def destroy_word(self,num):
         self._words.pop(num)
@@ -112,4 +107,5 @@ class Director:
 
     def game_over(self):
         if self._missed_words == 5:
+            print("You missed too many words in a row!")
             sys.exit()
