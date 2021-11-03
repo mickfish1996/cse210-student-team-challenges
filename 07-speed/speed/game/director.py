@@ -46,6 +46,8 @@ class Director:
     def _do_updates(self):
         """Spawn in new words at random locations 
         on the right side of the screen"""
+        self._erase_input()
+        self._handle_input_correct
         if self._make_more > 0 and self._count == 20:
             word = Word()
             self._words.append(word)
@@ -71,6 +73,10 @@ class Director:
         
         self._output_service.flush_buffer()
         
+    def _erase_input(self):
+        erase = self._input_service.erase_function()
+        if erase == True:
+            self._inputs.reset_input()
     
 
     def _prepare_board(self):
@@ -79,17 +85,22 @@ class Director:
         self._count = 20
         
 
+<<<<<<< HEAD
     def handle_input_correct(self):
         #if input == self._words:
         #    self.reset_input(self)
         #if input == "*":
         #    self.reset_input(self)
+=======
+    def _handle_input_correct(self):
+>>>>>>> f10122a0017afc78e996d47343f89a0cccc20e4b
         pass
     #handle comparison. Give points if it is correct and delete it
         #if (input) = (word):
             #give points and word_input.reset_input
         #if * is input:
-            #word_input.reset_input
+            #for i in range(len(word)):
+                #self._score_board.add_points(i)
     
     def destroy_word(self,num):
         self._words.pop(num)
