@@ -10,7 +10,7 @@ class Word(Actor):
         super().__init__()
         self._point = 0
         self.prepare()
-        self.score
+        #self.score
 
     def prepare(self):
         list_size = len(constants.LIBRARY)
@@ -27,6 +27,6 @@ class Word(Actor):
         velocity = Point(-1,0)
         self.set_velocity(velocity)
 
-    def get_score(self):
-        return self.score
+    #def get_score(self):
+        #return self.score
         

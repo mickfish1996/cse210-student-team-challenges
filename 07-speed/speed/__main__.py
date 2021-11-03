@@ -14,7 +14,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# 1. Compare input to word
-    # if correct delete word and give points
-# 2. Press enter delete the user input
